@@ -26,3 +26,33 @@ mongoose.connect('mongodb://localhost:27017/holyGround')
 //     })
 
 
+const seedPosts = [
+    {
+        title: 'Second Post',
+        description: 'This is the second post ever from the website',
+        category: 'announcement',
+    },
+    {
+        title: 'What is conditional statement?',
+        description: 'This is the post about teaching what is conditional statement. etc.',
+        category: 'lesson',
+    },
+    {
+        title: 'Tips on using VSCode settings',
+        description: 'This is the tip for making VSCode easier for C++ template',
+        category: 'tip',
+    },
+    {
+        title: 'Tips on web development',
+        description: 'This is the tip for starting to be a web developer',
+        category: 'tip',
+    },
+]
+
+Post.insertMany(seedPosts)
+    .then(res => {
+        console.log(res)
+    })
+    .catch(err => {
+        console.log(err)
+    })

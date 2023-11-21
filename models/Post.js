@@ -12,7 +12,7 @@ const postSchema = new mongoose.Schema({
     category: {
         type: String,
         lowercase: true,
-        enum: ['announcement', 'lesson', 'tips ']
+        enum: ['announcement', 'lesson', 'tip']
     }
 })
 

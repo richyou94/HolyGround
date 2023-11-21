@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 
 app.get('/blog', (req, res) => {
     res.send('blog site')
-})
+}) 
 
 app.listen(3000, () => {
     console.log("APP is listening on PORT 3000!")

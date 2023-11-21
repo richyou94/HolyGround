@@ -19,8 +19,8 @@ app.set('view engine', 'ejs');
 
 app.get('/blogs', async (req, res) => {
     const posts = await Post.find({})
-    // console.log(posts)
-    res.render('blogs/index');
+
+    res.render('blogs/index', { posts });
 })
 
 app.listen(3000, () => {
